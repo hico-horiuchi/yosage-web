@@ -1,0 +1,40 @@
+= doctype html
+html lang="en"
+  head
+    title yosage
+
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta http-equiv="x-ua-compatible" content="ie=edge"
+
+    link href="/assets/images/favicon.ico" rel="shortcut icon"
+    link href="/assets/stylesheets/materialize.min.css" rel="stylesheet"
+    link href="/assets/stylesheets/font-awesome.min.css" rel="stylesheet"
+    link href="/assets/stylesheets/animate.min.css" rel="stylesheet"
+    link href="/assets/stylesheets/style.css" rel="stylesheet"
+
+  body
+    nav.m-b-lg
+      .nav-wrapper.yosage
+        .container
+          a#app-title.brand-logo.medium href="/" yosage
+
+    = yield main
+
+    footer.page-footer.m-b-lg.p-y-0
+      .footer-copyright.white
+        .container
+          span.yosage-text.m-r-sm
+            i.fa.fa-copyright
+          a.yosage-text href="https://github.com/hico-horiuchi/kakuzuke" target="_blank" Akihiko Horiuchi
+
+    script src="/assets/javascripts/mithril.min.js" type="text/javascript"
+    script src="/app/components/anime.js" type="text/javascript"
+    script src="/app/components/dragdrop.js" type="text/javascript"
+    script src="/app/controllers/top_controller.js" type="text/javascript"
+    script src="/app/controllers/upload_controller.js" type="text/javascript"
+    script src="/app/controllers/lgtm_controller.js" type="text/javascript"
+    script src="/app/views/top.js" type="text/javascript"
+    script src="/app/views/upload.js" type="text/javascript"
+    script src="/app/views/lgtm.js" type="text/javascript"
+    script src="/app/app.js" type="text/javascript"

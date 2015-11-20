@@ -1,0 +1,8 @@
+*~
+.*.swp
+*#*
+.DS_Store
+/_vendor
+/.vendor
+/bin/kakuzuke
+/tmp
