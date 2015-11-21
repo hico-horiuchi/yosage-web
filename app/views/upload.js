@@ -28,6 +28,7 @@ var upload = upload || {};
   upload.error = function(status) {
     var statusIcons = {
       400: 'exclamation-triangle',
+      413: 'file-image-o',
       500: 'bug'
     };
 
