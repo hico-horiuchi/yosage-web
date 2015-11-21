@@ -18,6 +18,11 @@ var upload = upload || {};
   };
 
   upload.submit = function(data) {
+    anime.zoomOut(
+      document.getElementById('app-content'),
+      m.render(document.getElementById('app-body'), upload.loading())
+    );
+
     m.request({
       method: 'post',
       url: '/api/lgtm',

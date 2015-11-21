@@ -15,6 +15,16 @@ var upload = upload || {};
     }
   };
 
+  upload.loading = function() {
+    return [
+      m('#app-content.container.center.animated.zoomIn.m-b-lg.p-y-lg', {
+        config: anime.initialize
+      }, [
+        m('i.fa.fa-5x.fa-refresh.fa-spin.yosage-text')
+      ])
+    ];
+  };
+
   upload.error = function(status) {
     var statusIcons = {
       400: 'exclamation-triangle',

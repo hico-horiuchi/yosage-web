@@ -26,7 +26,7 @@ html lang="en"
         .container
           span.yosage-text.m-r-sm
             i.fa.fa-copyright
-          a.yosage-text href="https://github.com/hico-horiuchi/kakuzuke" target="_blank" Akihiko Horiuchi
+          a.yosage-text href="https://github.com/hico-horiuchi/yosage-web" target="_blank" Akihiko Horiuchi
 
     script src="/assets/javascripts/mithril.min.js" type="text/javascript"
     script src="/app/components/anime.js" type="text/javascript"

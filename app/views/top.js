@@ -14,7 +14,7 @@ var top = top || {};
           m('.col.s12.center', [
             m('h4.grey-text.text-darken-2.medium.m-a-0.m-b-sm', 'LGTM gif generator'),
             m('p.grey-text.m-a-0.m-b-md', [
-              'This is a Web UI of',
+              'This is a Web application of',
               m('a.yosage-text.m-x-sm[href=https://github.com/hico-horiuchi/yosage][target=_blank]', 'hico-horiuchi/yosage'),
               '.'
             ]),
