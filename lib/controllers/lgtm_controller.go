@@ -11,7 +11,7 @@ type LgtmController struct {
 	controller
 }
 
-func (lgtm LgtmController) Create(c web.C, w http.ResponseWriter, r *http.Request) {
+func (lgtm LgtmController) CreateAPI(c web.C, w http.ResponseWriter, r *http.Request) {
 	file, header, err := r.FormFile("inputfile")
 	if err != nil {
 		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
@@ -23,5 +23,5 @@ func (lgtm LgtmController) Create(c web.C, w http.ResponseWriter, r *http.Reques
 	if err != nil {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 	}
-	lgtm.API(w, result)
+	lgtm.JSON(w, result)
 }

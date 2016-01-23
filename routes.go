@@ -22,9 +22,9 @@ func main() {
 	top := controllers.TopController{}
 	lgtm := controllers.LgtmController{}
 
-	goji.Get("/assets/*", http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, Prefix: "/"}))
-	goji.Get("/app/*", http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, Prefix: "/"}))
-	goji.Post("/api/lgtm", lgtm.Create)
+	goji.Get("/assets/*", http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: AssetInfo, Prefix: "/"}))
+	goji.Get("/app/*", http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: AssetInfo, Prefix: "/"}))
+	goji.Post("/api/lgtm", lgtm.CreateAPI)
 	goji.Get("/", top.Index)
 
 	goji.Serve()
