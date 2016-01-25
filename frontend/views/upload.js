@@ -1,4 +1,5 @@
 var anime = anime || {};
+var common = common || {};
 var dragdrop = dragdrop || {};
 var upload = upload || {};
 
@@ -9,39 +10,10 @@ var upload = upload || {};
     document.title = 'upload | yosage';
 
     if (upload.status() !== 200) {
-      return upload.error(upload.status());
+      return common.error(upload.status());
     } else {
       return upload.form();
     }
-  };
-
-  upload.loading = function() {
-    return [
-      m('#app-content.container.center.animated.zoomIn.m-b-lg.p-y-lg', {
-        config: anime.initialize
-      }, [
-        m('i.fa.fa-5x.fa-refresh.fa-spin.yosage-text')
-      ])
-    ];
-  };
-
-  upload.error = function(status) {
-    var statusIcons = {
-      400: 'exclamation-triangle',
-      413: 'file-image-o',
-      500: 'bug'
-    };
-
-    return [
-      m('#app-content.container.center.animated.zoomIn.m-b-lg', {
-        config: anime.initialize
-      }, [
-        m('i.fa.fa-5x.yosage-text.m-b-md', {
-          class: 'fa-' + statusIcons[status]
-        }),
-        m('h5.grey-text.text-darken-2.medium.m-a-0', status),
-      ])
-    ];
   };
 
   upload.form = function() {

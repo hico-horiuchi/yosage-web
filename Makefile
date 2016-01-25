@@ -8,13 +8,13 @@ run:
 	gom run main.go ${ARGS}
 
 fmt:
-	gom exec goimports -w *.go lib/*/*.go
+	gom exec goimports -w *.go backend/*/*.go
 
 bindata:
-	gom exec go-bindata-assetfs ./lgtm.png ./app/... ./assets/... ./lib/views/...
+	gom exec go-bindata-assetfs ./lgtm.png ./frontend/... ./assets/... ./backend/views/...
 
 debugdata:
-	gom exec go-bindata-assetfs -debug=true ./lgtm.png ./app/... ./assets/... ./lib/views/...
+	gom exec go-bindata-assetfs -debug=true ./lgtm.png ./frontend/... ./assets/... ./backend/views/...
 
 build: fmt bindata
 	gom build $(GO_BUILDOPT) -o bin/yosage-web *.go

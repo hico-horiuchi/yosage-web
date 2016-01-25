@@ -3,7 +3,7 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/hico-horiuchi/yosage-web/lib/models"
+	"github.com/hico-horiuchi/yosage-web/backend/models"
 	"github.com/zenazn/goji/web"
 )
 

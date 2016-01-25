@@ -1,4 +1,5 @@
 var anime = anime || {};
+var common = common || {};
 var lgtm = lgtm || {};
 var upload = upload || {};
 
@@ -20,7 +21,7 @@ var upload = upload || {};
   upload.submit = function(data) {
     anime.zoomOut(
       document.getElementById('app-content'),
-      m.render(document.getElementById('app-body'), upload.loading())
+      m.render(document.getElementById('app-body'), common.loading())
     );
 
     m.request({
