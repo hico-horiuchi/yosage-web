@@ -1,5 +1,7 @@
 ## yosage-web
 
+[![Circle CI](https://circleci.com/gh/hico-horiuchi/yosage-web.svg?style=shield)](https://circleci.com/gh/hico-horiuchi/yosage-web)
+
 ![screen.gif](https://raw.githubusercontent.com/hico-horiuchi/yosage-web/master/screen.gif)
 
 #### Requirements
