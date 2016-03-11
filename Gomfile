@@ -1,3 +1,4 @@
+gom 'github.com/goware/httpcoala'
 gom 'github.com/hico-horiuchi/yosage/yosage'
 gom 'github.com/yosssi/ace'
 gom 'github.com/zenazn/goji'

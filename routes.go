@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
+	"github.com/goware/httpcoala"
 	"github.com/hico-horiuchi/yosage-web/backend/controllers"
 	"github.com/hico-horiuchi/yosage/yosage"
 	"github.com/zenazn/goji"
@@ -27,5 +28,6 @@ func main() {
 	goji.Post("/api/lgtm", lgtm.CreateAPI)
 	goji.Get("/", top.Index)
 
+	goji.Use(httpcoala.Route("*"))
 	goji.Serve()
 }
